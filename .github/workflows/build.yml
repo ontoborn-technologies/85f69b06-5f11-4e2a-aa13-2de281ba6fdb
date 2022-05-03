@@ -25,6 +25,7 @@ jobs:
           GITHUB_TOKEN: 85f69b06-5f11-4e2a-aa13-2de281ba6fdb
           SONAR_TOKEN: 6c6b2469c3347bcc5a90cd7dbec5c8ce8a816eb6
         run: >-
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-          -Dsonar.projectKey=examly-test_85f69b06-5f11-4e2a-aa13-2de281ba6fdb
-          -Dsonar.login=6c6b2469c3347bcc5a90cd7dbec5c8ce8a816eb6
+         dotnet tool install --global dotnet-sonarscanner
+         dotnet sonarscanner begin /k:"examly-test_85f69b06-5f11-4e2a-aa13-2de281ba6fdb" /o:"examly-test" /d:sonar.login="6c6b2469c3347bcc5a90cd7dbec5c8ce8a816eb6"
+         dotnet build tree/main/springapp
+         dotnet sonarscanner end /d:sonar.login="6c6b2469c3347bcc5a90cd7dbec5c8ce8a816eb6"
