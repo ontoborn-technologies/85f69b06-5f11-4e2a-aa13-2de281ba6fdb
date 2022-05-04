@@ -13,15 +13,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v2
         with:
-          fetch-depth: 0
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: | 
-           3.1.x
-           5.0.x
+          dotnet-version: '3.1.x'
       - name: Build and analyze
         env:
           GITHUB_TOKEN: 85f69b06-5f11-4e2a-aa13-2de281ba6fdb
