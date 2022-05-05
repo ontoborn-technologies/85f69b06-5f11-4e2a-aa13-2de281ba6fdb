@@ -25,5 +25,5 @@ jobs:
          dotnet run --project aspnetcore-dev
          dotnet tool install --global dotnet-sonarscanner
          dotnet sonarscanner begin /k:"examly-test_85f69b06-5f11-4e2a-aa13-2de281ba6fdb" /o:"examly-test" /d:sonar.login="6c6b2469c3347bcc5a90cd7dbec5c8ce8a816eb6"
-         dotnet build /aspnet-core-angular/aspnet-core/EventCloud.sln
+         dotnet build aspnet-core-angular\aspnet-core\EventCloud.sln
          dotnet sonarscanner end /d:sonar.login="6c6b2469c3347bcc5a90cd7dbec5c8ce8a816eb6"
