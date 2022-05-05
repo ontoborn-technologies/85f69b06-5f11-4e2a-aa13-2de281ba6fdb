@@ -62,7 +62,8 @@ jobs:
             -Dsonar.projectKey=ontoborn-technologies_85f69b06-5f11-4e2a-aa13-2de281ba6fdb
             -Dsonar.organization=ontoborn-technologies
             -Dsonar.sources=aspnet-core-angular/,mvc-angularjs/src 
-            -Dsonar.verbose=true
+            -Dsonar.verbose=false
+            -Dsonar.exclusions=mvc-angularjs/src/EventCloud.Web/Content,mvc-angularjs/src/EventCloud.Web/Scripts
             # optional, default is project base directory
             # When you need the analysis to take place in a directory other than the one from which it was launched
             #-Dsonar.projectBaseDir= # optional, default is .
